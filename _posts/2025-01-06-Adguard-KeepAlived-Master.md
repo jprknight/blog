@@ -2,6 +2,8 @@
 title: AdGuard KeepAlived Master
 ---
 
+```
+
 # https://www.pentestpartners.com/security-blog/how-to-use-keepalived-for-high-availability-and-load-balancing/
 # https://technotim.live/posts/keepalived-ha-loadbalancer/
 
@@ -61,3 +63,5 @@ virtual_server 192.168.1.105 53 {
                 }
         }
 }
+
+```
