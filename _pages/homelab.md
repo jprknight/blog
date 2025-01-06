@@ -33,7 +33,7 @@ Each VM has Webmin installed for some easy web gui management if needed, along w
 - AdGuard2
 - TestingSandbox
 
-## Notes
+## Hardware Notes
 
 ### Proxmox VE Host (n.n.n.50)
 
@@ -72,6 +72,8 @@ DHCP server advertises NetBoot.xyz as the PXI boot service on the network.
 #### NTP
 
 DHCP server advertises PFSense as the NTP service on the network.
+
+## VM Notes
 
 ### Shinobi (n.n.n.30)
 
