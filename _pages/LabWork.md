@@ -124,7 +124,7 @@ KeepAlived creating a VIP for DNS, setup for round robin.
 
 There's no 'high availability' here since I am running both VMs on the same host. I just wanted to play with creating a Virtual IP Address (VIP) and failover.
 
-</2025-01-06-AdGuard-KeepAlived-Master/>
+<https://2025-01-06-AdGuard-KeepAlived-Master/>
 
 ### TestingSandbox
 
