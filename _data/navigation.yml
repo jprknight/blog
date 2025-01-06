@@ -1,4 +1,6 @@
 main:
+  - title: "Lab Work"
+    url: /Labwork/
   - title: "Posts"
     url: /posts/
   - title: "Categories"
