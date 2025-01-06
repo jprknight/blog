@@ -1,8 +1,10 @@
-Earlier in 2024 I upgraded my Proxmox host to 8.2 and ran into the issues mentioned here: https://forum.proxmox.com/threads/no-networking-after-upgrade-to-8-2.145727/, where my **Network Interface Card** name changed upon a reboot after the update. At that time I took the quick fix route of updating the NIC name and moving on.
+Earlier in 2024 I upgraded my Proxmox host to 8.2 and ran into the issues mentioned here: [https://forum.proxmox.com/threads/no-networking-after-upgrade-to-8-2.145727/](https://forum.proxmox.com/threads/no-networking-after-upgrade-to-8-2.145727/), where my **Network Interface Card** name changed upon a reboot after the update. At that time I took the quick fix route of updating the NIC name and moving on.
 
 Over the holidays I was out of town and was monitoring my home with cameras when a unexpected power loss made the host power cycle. Some additional updates or a kernel update must have changed the NIC name on my again.
 
-At this point I found https://pve.proxmox.com/pve-docs/pve-admin-guide.html#network_override_device_names and followed the guidance to create a unique NIC name matched against the MAC address of the NIC I am using on the host.
+At this point I found [https://pve.proxmox.com/pve-docs/pve-admin-guide.html#network_override_device_names](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#network_override_device_names) and followed the guidance to create a unique NIC name matched against the MAC address of the NIC I am using on the host.
+
+
 
 My situation is complicated by the fact I have multiple NICs in my Proxmox host. A built in NIC (unused), and a quad port NIC, which I am using one port.
 
