@@ -22,7 +22,7 @@ Name=enlan0
 2. Ran
 
 ```
-   update-initramfs -u -k all
+update-initramfs -u -k all
 ```
 
 4. Rebooted the host for this change to take effect. This made enlan0 appear when running 'ip a'.
@@ -30,13 +30,13 @@ Name=enlan0
 5. Edited the /etc/network/interfaces file to the below. My main and only change here was pointing bridge-ports to enlan0.
 
 ```
-  auto lo
-  iface lo inet loopback
+auto lo
+iface lo inet loopback
 
-  iface eno1 inet manual
+iface eno1 inet manual
 
-  auto vmbr0
-  iface vmbr0 inet static
+auto vmbr0
+iface vmbr0 inet static
     address 192.168.1.50/24
     gateway 192.168.1.75
     bridge-ports enlan0
