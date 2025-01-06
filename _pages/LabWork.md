@@ -9,7 +9,7 @@ toc_sticky: true
 
 A single HP Z230 machine with an i7-4770, 32GB RAM, a 1TB SSD and a four port Intel NIC running Proxmox VE.
 
-HP Thin Client running PFSense firewall.
+HP Thin Client, with a low profile four port Intel NIC, running PFSense firewall.
 
 ## Virtual Machines
 
