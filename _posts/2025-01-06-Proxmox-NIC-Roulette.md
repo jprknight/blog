@@ -20,12 +20,15 @@ Name=enlan0
 ```
 
 2. Ran
+
 ```
    update-initramfs -u -k all
 ```
+
 4. Rebooted the host for this change to take effect. This made enlan0 appear when running 'ip a'.
 
 5. Edited the /etc/network/interfaces file to the below. My main and only change here was pointing bridge-ports to enlan0.
+
 ```
   auto lo
   iface lo inet loopback
@@ -40,6 +43,7 @@ Name=enlan0
     bridge-stp off
     bridge-fd 0
 ```
+
 5. Ran service networking restart.
 
 My subsequent kernel update and host reboot worked flawlessly. No more sudden loss of network connectivity.
