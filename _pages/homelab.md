@@ -7,7 +7,7 @@ toc_sticky: true
 
 I put this together to document what's running in my home lab, how it's setup, and lessons learned. All so things are easier for me to recall as needed.
 
-The majority of these services are not available from the internet. The one service which is exposed to the internet is running Fail2Ban to ban IP addresses which create too many failed sign in attempts.
+The majority of these services are not available from the internet. The one service which is exposed to the internet is running Fail2Ban to ban IP addresses which create too many failed sign in attempts. It's not Vault Warden, my personal taste that's more risk than I am willing to take. The trade off I am happy to make is, I can only update passwords when on my local network.
 
 ## Hardware
 
