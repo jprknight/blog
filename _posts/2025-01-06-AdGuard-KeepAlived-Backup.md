@@ -1,5 +1,6 @@
 ---
-title: AdGuard-KeepAlived Backup
+title: AdGuard KeepAlived Backup
+permalink: /AdGuard-KeepAlived-Backup/
 ---
 
 ```
