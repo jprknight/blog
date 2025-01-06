@@ -63,7 +63,7 @@ One thing I have noticed is connecting to consoles doesn't work for me when conn
 
 #### DHCP
 
-DHCP pool is from n.n.n.226 to n.n.n.254. 
+DHCP pool is from n.n.n.226 to n.n.n.254. Added static mappings for each known device on the network. The DHCP pool is reserved for new or guest devices. Investigating a firewall rule to subnet this group of addresses to allow guest devices out to the internet on only 80 and 443.
 
 #### DNS
 
