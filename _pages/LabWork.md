@@ -28,6 +28,7 @@ My distribution of choice is Ubuntu server.
 - Ansible
 - AdGuard1
 - AdGuard2
+- TestingSandbox
 
 ## Notes
 
@@ -82,3 +83,7 @@ Ad blocker, provide local DNS resolution / redirection to Nginx for SSL certific
 KeepAlived creating a VIP for DNS, setup for round robin.
 
 There's no 'high availability' here since I am running both VMs on the same host. I just wanted to play with creating a Virtual IP Address (VIP) and failover.
+
+### TestingSandbox
+
+A test box to break and throw away if things go really sideways with it. No actual services I plan to use live here.
