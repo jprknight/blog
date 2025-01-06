@@ -8,7 +8,7 @@ My situation is complicated by the fact I have multiple NICs in my Proxmox host.
 
 In order to stop NIC name updates taking effect on planned or unplanned reboots I did the following.
 
-1. Created the new file **/etc/systemd/network/10-enlan0.link** with the content below:
+* Created the new file **/etc/systemd/network/10-enlan0.link** with the content below:
 
 ```
 [Match]
@@ -19,15 +19,15 @@ Type=ether
 Name=enlan0
 ```
 
-2. Ran
+* Ran
 
 ```
 update-initramfs -u -k all
 ```
 
-4. Rebooted the host for this change to take effect. This made enlan0 appear when running 'ip a'.
+* Rebooted the host for this change to take effect. This made enlan0 appear when running 'ip a'.
 
-5. Edited the /etc/network/interfaces file to the below. My main and only change here was pointing bridge-ports to enlan0.
+* Edited the /etc/network/interfaces file to the below. My main and only change here was pointing bridge-ports to enlan0.
 
 ```
 auto lo
@@ -44,6 +44,6 @@ iface vmbr0 inet static
     bridge-fd 0
 ```
 
-5. Ran service networking restart.
+* Ran service networking restart.
 
 My subsequent kernel update and host reboot worked flawlessly. No more sudden loss of network connectivity.
