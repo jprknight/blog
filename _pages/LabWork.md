@@ -14,6 +14,8 @@ HP Thin Client running PFSense firewall.
 
 My distribution of choice is Ubuntu server.
 
+Each VM has Webmin installed for some easy web gui management if needed, along with SSH enabled.
+
 - Shinobi for monitoring IP cameras.
 - Minecraft Java Edition.
 - Docker
@@ -60,7 +62,7 @@ Advertises NTP, NetBoot.xyz, and the AdGuard VIP as a DNS server.
 
 ### Shinobi (n.n.n.30)
 
-Published to the internet on <https://catcams.contoso.com> via a CloudFlare tunnel. Agent running outbound.
+Published to the internet with a CloudFlare tunnel.
 
 ### Minecraft  (n.n.n.40)
 
@@ -131,6 +133,6 @@ AdGuard KeepAlived Master Config: <https://jprknight.github.io/blog/AdGuard-Keep
 
 AdGuard KeepAlived Backup Config: <https://jprknight.github.io/blog/AdGuard-KeepAlived-Backup/>
 
-### TestingSandbox
+### TestingSandbox (n.n.n.45)
 
 A test box to break and throw away if things go really sideways with it. No actual services I plan to use live here.
