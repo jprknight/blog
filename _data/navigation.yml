@@ -1,6 +1,6 @@
 main:
   - title: "Home Lab"
-    url: /HomeLab/
+    url: /homelab/
   - title: "Posts"
     url: /posts/
   - title: "Categories"
