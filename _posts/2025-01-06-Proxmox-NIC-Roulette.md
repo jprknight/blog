@@ -12,7 +12,7 @@ In order to stop NIC name updates taking effect on planned or unplanned reboots 
 
 * Created the new file **/etc/systemd/network/10-enlan0.link** with the content below:
 
-```
+```shell
 [Match]
 MACAddress=00:26:cc:dd:ee:9b
 Type=ether
@@ -23,7 +23,7 @@ Name=enlan0
 
 * Update configuration with:
 
-```
+```shell
 update-initramfs -u -k all
 ```
 
@@ -31,7 +31,7 @@ update-initramfs -u -k all
 
 * Edited the /etc/network/interfaces file to the below. My main and only change here was pointing bridge-ports to enlan0.
 
-```
+```shell
 auto lo
 iface lo inet loopback
 
