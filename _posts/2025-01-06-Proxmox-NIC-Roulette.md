@@ -19,7 +19,7 @@ Type=ether
 Name=enlan0
 ```
 
-* Ran
+* Update configuration with:
 
 ```
 update-initramfs -u -k all
