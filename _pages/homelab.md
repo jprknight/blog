@@ -52,7 +52,8 @@ One thing I have noticed is connecting to consoles doesn't work for me when conn
 - Anti-Lockout Rule (added by PFSense).
 - Allow alias for Power Users to get out anywhere on the internet on any port.
 - Block blacklist alias for devices not allowed out to the internet. IP cameras aren't allowed to 'phone home'.
-- Allow typical web, email, ftp / ssh, gaming ports.
+- Allow typical web for guest devices.
+- Allow typical web, email, ftp / ssh, gaming ports for other, known devices.
 - Allow specific devices out to the internet on specific ports. Not 53.
 - DNS: High level design is to only allow DNS lookups through local name server, disallow services and devices using internet based name servers.
   - Allow specific name servers (AdGuard) to make DNS calls out to the internet.
@@ -63,7 +64,7 @@ One thing I have noticed is connecting to consoles doesn't work for me when conn
 
 #### DHCP
 
-DHCP pool is from n.n.n.226 to n.n.n.254. Added static mappings for each known device on the network. The DHCP pool is reserved for new or guest devices. Investigating a firewall rule to subnet this group of addresses to allow guest devices out to the internet on only 80 and 443.
+DHCP pool is from n.n.n.226 to n.n.n.254. Added static mappings for each known device on the network. The DHCP pool is reserved for new or guest devices. A firewall rule only allows guest devices out to the internet on 80 and 443.
 
 #### DNS
 
