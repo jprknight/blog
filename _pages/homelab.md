@@ -57,13 +57,19 @@ Community Edition VE server. Setup enlan0 to match the MAC address of the connec
 
 #### DHCP
 
-DHCP pool is from n.n.n.226 to n.n.n.254.
+DHCP pool is from n.n.n.226 to n.n.n.254. 
 
 #### DNS
 
-DHCP server advertises AdGuard VIP as the DNS server on the network.
+DHCP server advertises AdGuard VIP as the DNS service on the network.
 
-Advertises NTP, NetBoot.xyz, and the 
+#### NetBoot
+
+DHCP server advertises NetBoot.xyz as the PXI boot service on the network.
+
+#### NTP
+
+DHCP server advertises PFSense as the NTP service on the network.
 
 ### Shinobi (n.n.n.30)
 
