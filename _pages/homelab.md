@@ -13,7 +13,7 @@ The majority of these services are not available from the internet. The one serv
 
 A single HP Z230 machine with an i7-4770, 32GB RAM, a 1TB SSD and a four port Intel NIC running Proxmox VE.
 
-This is probably well known by now, but attempting to run multiple VMs from a spindle disk is no fun.
+Maybe well known by now, but attempting to run multiple VMs from a spindle disk is no fun.
 
 HP Thin Client, with a low profile four port Intel NIC, running PFSense firewall.
 
