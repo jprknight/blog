@@ -24,7 +24,7 @@ vrrp_instance VI4SM {
         authentication {
                 #auth_type PASS # simple authentication (plain)
                 auth_type AH    # good authentication
-                auth_pass Gh05ted5 # password
+                auth_pass changeme # password
         }
         virtual_ipaddress {
                 192.168.1.110/24 dev ens18 # Virtual IP address and interface assignment
