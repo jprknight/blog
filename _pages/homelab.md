@@ -7,6 +7,8 @@ toc_sticky: true
 
 I put this together to document what's running in my home lab, how it's setup, and lessons learned. All so things are easier for me to recall as needed.
 
+The majority of these services are not available from the internet. The one service which is exposed to the internet is running Fail2Ban to ban IP addresses which create too many failed sign in attempts.
+
 ## Hardware
 
 A single HP Z230 machine with an i7-4770, 32GB RAM, a 1TB SSD and a four port Intel NIC running Proxmox VE.
