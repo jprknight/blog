@@ -9,6 +9,7 @@ My situation is complicated by the fact I have multiple NICs in my Proxmox host.
 In order to stop NIC name updates taking effect on planned or unplanned reboots I did the following.
 
 1. Created the new file **/etc/systemd/network/10-enlan0.link** with the content below:
+
 ```
 [Match]
 MACAddress=00:26:cc:dd:ee:9b
@@ -17,6 +18,7 @@ Type=ether
 [Link]
 Name=enlan0
 ```
+
 2. Ran
 ```
    update-initramfs -u -k all
