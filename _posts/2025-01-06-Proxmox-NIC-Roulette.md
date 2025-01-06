@@ -10,12 +10,12 @@ In order to stop NIC name updates taking effect on planned or unplanned reboots 
 
 1. Created the new file **/etc/systemd/network/10-enlan0.link** with the content below:
 ```
-  [Match]
-  MACAddress=00:26:cc:dd:ee:9b
-  Type=ether
+[Match]
+MACAddress=00:26:cc:dd:ee:9b
+Type=ether
 
-  [Link]
-  Name=enlan0
+[Link]
+Name=enlan0
 ```
 2. Ran
 ```
