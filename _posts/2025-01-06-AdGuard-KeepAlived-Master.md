@@ -2,7 +2,7 @@
 title: AdGuard KeepAlived Master
 ---
 
-Content for keepalived.conf on the AdGuard backup server.
+Content for keepalived.conf on the AdGuard master server.
 
 ```
 
