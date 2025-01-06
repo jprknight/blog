@@ -121,7 +121,9 @@ Self hosted password manager. Backing up data to cloud storage with rclone.
 
 ### Nginx Reverse Proxy  (n.n.n.80)
 
-Using "Let's Encrypt" to provide trusted, third party SSL certificates on network services.
+Using "Let's Encrypt" to provide trusted, third party SSL certificates on network services. Setup with the "Offline" approach, where the instructions prompt to take a secret key to another machine with a web browser to complete the authentication / authorization.
+
+Multiple network services (service.contoso.com) are directed to this service to serve up as trusted SSL sites when accessed in a web browser.
 
 ### Squid Deb Proxy (n.n.n.20)
 
@@ -140,7 +142,7 @@ Automate things like setting timezones, Squid Deb Proxy etc on all machines.
 
 ### AdGuard (n.n.n.108, n.n.n.109, VIP on n.n.n.110)
 
-Ad blocker, provide local DNS resolution / redirection to Nginx for SSL certificates. All "local" (those in my domain name) DNS records point to Nginx to pick up the SSL certificate when accessed via a browser.
+Ad blocker, provide local DNS resolution / redirection to Nginx for SSL certificates. Multiple network services (service.contoso.com) are directed Nginx by AdGuard through local DNS records to serve up as trusted SSL sites when accessed in a web browser.
 
 KeepAlived creating a VIP for DNS, setup for round robin.
 
