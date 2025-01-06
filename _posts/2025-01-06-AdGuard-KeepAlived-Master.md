@@ -2,6 +2,8 @@
 title: AdGuard KeepAlived Master
 ---
 
+Content for keepalived.conf on the AdGuard backup server.
+
 ```
 
 # https://www.pentestpartners.com/security-blog/how-to-use-keepalived-for-high-availability-and-load-balancing/
