@@ -6,7 +6,7 @@ toc: true
 
 ## Lab Host
 
-A single machine with a 1TB SSD and a four port Intel NIC running Proxmox VE.
+A single HP Z230 machine with an i7-4770, 32GB RAM, a 1TB SSD and a four port Intel NIC running Proxmox VE.
 
 HP Thin Client running PFSense firewall.
 
@@ -32,6 +32,32 @@ My distribution of choice is Ubuntu server.
 
 ## Notes
 
+### Proxmox VE Host (n.n.n.50)
+
+Community Edition VE server. Setup enlan0 to match the MAC address of the connected NIC port.
+
+### PFSense (n.n.n.75)
+
+#### Firewall Rules
+
+- Anti-Lockout Rule (added by PFSense).
+- Allow alias for Power Users to get out anywhere on the internet on any port.
+- Block blacklist alias for devices not allowed out to the internet. IP cameras aren't allowed to 'phone home'.
+- Allow typical web, email, ftp / ssh, gaming ports.
+- Allow specific devices out to the internet on specific ports. Not 53.
+- DNS: High level design is to only allow DNS lookups through local name server, disallow services and devices using internet based name servers.
+  - Allow specific name servers (AdGuard) to make DNS calls out to the internet.
+  - NAT redirect all others to internal DNS VIP (AdGuard).
+  - Block DNS over TLS.
+  - Block common DNS over HTTPS.
+- NAT redirect any outbound NTP requests to PFSense.
+
+#### DHCP
+
+DHCP pool is from n.n.n.226 to n.n.n.254. 
+
+Advertises NTP, NetBoot.xyz, and the AdGuard VIP as a DNS server.
+
 ### Shinobi (n.n.n.30)
 
 Published to the internet on <https://catcams.contoso.com> via a CloudFlare tunnel. Agent running outbound.
@@ -44,19 +70,33 @@ I'm terrible at creating worlds and then wiping them, deleting them, or losing t
 
 I'm never a fan of multi purposing a 'server', but some of these services only come in Docker form.
 
+#### Portainer
+
+Port 9443.
+
+Manage Docker in a web gui.
+
 #### AdGuard-Sync
+
+Port 8080.
 
 Syncs changes between the two AdGuard instances running.
 
 #### Organizr
 
+Port 80.
+
 Great dashboard for all my network services. Includes SSL certificate and IP based links. Has plugins for AdGuard and Uptime Kuma which is a nice bonus.
 
 #### Uptime Kuma
 
+Port 3001.
+
 Monitoring tool for all network services and devices.
 
 #### Vault Warden
+
+Port 8090.
 
 Self hosted password manager. Backing up data to cloud storage with rclone.
 
