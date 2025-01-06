@@ -1,5 +1,5 @@
 ---
-permalink: /HomeLab/
+permalink: /homelab/
 title: "What's Going On In My Lab"
 toc: true
 toc_sticky: true
