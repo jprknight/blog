@@ -2,7 +2,18 @@
 layout: archive
 ---
 
-ds
+### AdGuard (n.n.n.108, n.n.n.109, VIP on n.n.n.110)
+
+Ad blocker, provide local DNS resolution / redirection to Nginx for SSL certificates. All "local" (those in my domain name) DNS records point to Nginx to pick up the SSL certificate when accessed via a browser.
+
+KeepAlived creating a VIP for DNS, setup for round robin.
+
+There's no 'high availability' here since I am running both VMs on the same host. I just wanted to play with creating a Virtual IP Address (VIP) and failover.
+
+AdGuard KeepAlived Master Config: <https://jprknight.github.io/blog/AdGuard-KeepAlived-Master/>
+
+AdGuard KeepAlived Backup Config: <https://jprknight.github.io/blog/AdGuard-KeepAlived-Backup/>
+
 
 {{ content }}
 
