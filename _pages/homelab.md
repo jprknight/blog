@@ -41,6 +41,8 @@ Community Edition VE server. Setup enlan0 to match the MAC address of the connec
 
 ### PFSense (n.n.n.75)
 
+One thing I have noticed is connecting to consoles doesn't work for me when connecting to my Proxmox host with a SSL/HTTPS DNS name. So I tend to connect to the IP address on HTTP instead.
+
 #### Firewall Rules
 
 - Anti-Lockout Rule (added by PFSense).
