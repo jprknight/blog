@@ -116,6 +116,9 @@ PFSense advertises this service within DHCP settings. Using here and there for t
 
 Automate things like setting timezones, Squid Deb Proxy etc on all machines.
 
+/etc/ansible/files
+/etc/ansible/playbooks
+
 ### AdGuard (n.n.n.108, n.n.n.109, VIP on n.n.n.110)
 
 Ad blocker, provide local DNS resolution / redirection to Nginx for SSL certificates. 
