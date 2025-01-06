@@ -19,7 +19,7 @@ HP Thin Client, with a low profile four port Intel NIC, running PFSense firewall
 
 My distribution of choice is Ubuntu server.
 
-Each VM has Webmin installed for some easy web gui management if needed, along with SSH enabled.
+Each VM has WebMin installed for some easy web gui management if needed, along with SSH enabled. One action which is very easy through WebMin is to setup automatic updates.
 
 - Shinobi for monitoring IP cameras.
 - Minecraft Java Edition.
