@@ -15,7 +15,7 @@ It's not Vault Warden, my personal taste, that's more risk than I am willing to 
 
 ## Hardware
 
-A single HP Z230 machine with an i7-4770, 32GB RAM, a 1TB SSD and a four port Intel NIC running Proxmox VE.
+A single HP Z230 machine with an i7-4770 CPU, 32GB RAM, a 1TB SSD and a four port Intel NIC running Proxmox VE.
 
 Maybe well known by now, but attempting to run multiple VMs from a spindle disk is no fun.
 
